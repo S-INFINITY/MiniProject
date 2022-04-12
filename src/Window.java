@@ -2,12 +2,16 @@ import java.awt.Canvas;
 
 import javax.swing.JFrame;
 
+import EventHandler.KeyInput;
+
 // This class is used to create the window that the game will be displayed in.
 
 public class Window extends Canvas {
-    public Window(int width, int height, String title, Game game) {
+    public Window(int width, int height, String title, Game game, KeyInput keyInput) {
 
         JFrame frame = new JFrame(title);
+
+        frame.addKeyListener(keyInput);
 
         // Setting the size of the window
         frame.setPreferredSize(new java.awt.Dimension(width, height));

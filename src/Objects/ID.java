@@ -3,14 +3,6 @@ package Objects;
 
 public enum ID {
     Player(),
-    Mob(),
     Block(),
-    Bullet(),
-    Particle(),
-    Item(),
     Enemy(),
-    EnemyBullet(),
-    EnemyBoss(),
-    EnemyBossBullet(),
-    EnemyBossParticle(),
 }

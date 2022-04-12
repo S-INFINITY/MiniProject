@@ -1,9 +1,14 @@
-package Objects;
+package Objects.Abstract;
 
 import java.awt.Graphics;
 
 import java.awt.image.BufferedImage;
+
+import Objects.ID;
 import Objects.AssetController.SpriteSheetController;
+
+import java.awt.geom.AffineTransform;
+import java.awt.image.AffineTransformOp;
 
 /* This class is used to blueprint a game object. 
 It has a position, a size, a sprite, and a ID.
@@ -23,18 +28,33 @@ public abstract class GameObject {
     protected float velX, velY;
     protected SpriteSheetController spriteSheetController;
     protected BufferedImage sprite;
+    protected int width, height;
+    protected final int canvasWidth, canvasHeight;
 
-    public GameObject(float x, float y, ID id, String spriteSheetPath) {
+    public GameObject(float x, float y, ID id, String spriteSheetPath, int canvasWidth, int canvasHeight) {
         this.x = x;
         this.y = y;
         this.id = id;
         this.spriteSheetController = new SpriteSheetController(spriteSheetPath);
+        this.canvasWidth = canvasWidth;
+        this.canvasHeight = canvasHeight;
 
     }
 
     public abstract void tick();
 
     public abstract void render(Graphics g);
+
+    public abstract void handleKeys(Boolean[] keys);
+
+    public void flipSprite() {
+        AffineTransform tx = AffineTransform.getScaleInstance(-1, 1);
+        tx.translate(-sprite.getWidth(null), 0);
+        AffineTransformOp op = new AffineTransformOp(tx,
+                AffineTransformOp.TYPE_NEAREST_NEIGHBOR);
+        sprite = op.filter(sprite, null);
+
+    }
 
     public float getX() {
         return x;

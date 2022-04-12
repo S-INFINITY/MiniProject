@@ -10,6 +10,7 @@
 	<SubTexture name="alienBeige_swim2.png" x="0" y="512" width="128" height="256"/>
 	<SubTexture name="alienBeige_walk1.png" x="0" y="256" width="128" height="256"/>
 	<SubTexture name="alienBeige_walk2.png" x="0" y="0" width="128" height="256"/>
+
 	<SubTexture name="alienBlue_climb1.png" x="384" y="768" width="128" height="256"/>
 	<SubTexture name="alienBlue_climb2.png" x="768" y="1280" width="128" height="256"/>
 	<SubTexture name="alienBlue_duck.png" x="768" y="1024" width="128" height="256"/>
@@ -21,6 +22,7 @@
 	<SubTexture name="alienBlue_swim2.png" x="640" y="1536" width="128" height="256"/>
 	<SubTexture name="alienBlue_walk1.png" x="640" y="1280" width="128" height="256"/>
 	<SubTexture name="alienBlue_walk2.png" x="640" y="1024" width="128" height="256"/>
+	
 	<SubTexture name="alienGreen_climb1.png" x="640" y="768" width="128" height="256"/>
 	<SubTexture name="alienGreen_climb2.png" x="640" y="512" width="128" height="256"/>
 	<SubTexture name="alienGreen_duck.png" x="640" y="256" width="128" height="256"/>
